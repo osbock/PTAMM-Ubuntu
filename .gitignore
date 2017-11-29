@@ -1,0 +1,8 @@
+#emacs backups
+**/*~
+**/\#*
+#binaries
+**/*.o
+**/*.so
+**/*.so.0
+map*/

@@ -1,0 +1,25 @@
+sudo apt-get install libblas-dev
+sudo apt-get install liblapack-dev
+sudo apt-get install libgfortran-5-dev
+sudo apt-get install libncurses5-dev
+sudo apt-get install libreadline-dev
+sudo apt-get install libpng16-dev
+sudo apt-get install libtiff5-dev
+sudo apt-get install libjpeg-dev
+sudo apt-get install lib3ds-dev
+git clone https://github.com/edrosten/TooN
+git clone https://github.com/edrosten/libcvd
+Lib cvd dependencies:
+sudo apt-get install libjpeg-dev libpng-dev libtiff-dev libx11-dev libavformat-dev libavdevice-dev libavcodec-dev libavutil-dev libswresample-dev libglu-dev libdc1394-22
+
+compiling gvars, libcvd
+
+The default C++ compiler on Ubuntu 16.04 will not compile libCVD because of a bug in the standards compliance of the compiler.. If you want to use libcvd, you will need to install a newer compiler. The easiest eay is to add the toolchain test PPA:
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install g++-7
+Now you can build libcvd with either:
+
+export CXX=g++-7 ./configure
+make
